@@ -71,7 +71,7 @@ class GroupsDataset(torch.utils.data.Dataset):
 train_dataset = GroupsDataset(train_encodings, train_label)
 test_dataset = GroupsDataset(test_encodings, test_label)
 
-model = BertForSequenceClassification.from_pretrained(model_name, num_labels=2)
+model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2)
 
 from sklearn.metrics import f1_score
 def compute_metrics(pred):
